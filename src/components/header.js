@@ -1,33 +1,34 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
+import { Anchor } from './button'
+import logo from '../media/logo.png'
+
+import styled from 'styled-components'
+
+const StyledLink = styled(Link)`
+  margin: 0 auto;
+  max-width: 900px;
+  padding-top: 50px;
+  .layout__link {
+    width: 140px;
+  }
+`
+
+const Header = props => (
+  <>
+    <StyledLink to={`/`}>
+      <img className={`layout__link`} src={logo} alt={logo} />
+    </StyledLink>
+    <Anchor
+      href={props.contact}
+      float="right"
+      color="white"
+      backgroundColor="#50a1fd"
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
+      Lets Talk
+    </Anchor>
+  </>
 )
 
 export default Header

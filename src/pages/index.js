@@ -1,25 +1,61 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
 import Layout from '../components/layout'
-import Image from '../components/image'
+import { graphql } from 'gatsby'
+import CTA from '../components/cta'
+import AllUX from '../components/allUXers'
+// import "./index.css";
 
 import styled from 'styled-components'
 
-const StyledHeading = styled.h1`
-  color: ${props => props.color};
+const IndexHeading = styled.h1`
+  margin: 80px 0;
 `
 
-const IndexPage = props => (
-  <Layout>
-    <StyledHeading color="green">Hi people</StyledHeading>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export default ({ data }) => {
+  return (
+    <Layout>
+      <IndexHeading>
+        Welcome, here you can view all our UX consultants
+      </IndexHeading>
+      <div>
+        <AllUX width={`300`} data={data.allMarkdownRemark.edges} />
+      </div>
+      <CTA contact={data.site.siteMetadata.peterContact} />
+    </Layout>
+  )
+}
 
-export default IndexPage
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        peterContact
+      }
+    }
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            strengths
+            level
+            cover_image {
+              publicURL
+              childImageSharp {
+                id
+                fluid {
+                  src
+                }
+              }
+            }
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`

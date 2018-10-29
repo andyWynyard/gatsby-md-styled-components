@@ -1,0 +1,53 @@
+---
+name: "Jacob Jansson"
+email: "jacob.jansson@sigma.se"
+phone: "+46 725 21 70 77"
+section: cv
+cover_image: "./jacob-j.jpg"
+portfolio_download: "Jacobjansson.myportfolio.com"
+cv_download: "Jacobjansson.myportfolio.com"
+strengths:
+  - "UX-design"
+  - "target group analysis"
+  - "Pre study"
+  - "Usability testing"
+  - "Wireframing"
+level: "Mid-level"
+quote:
+  - "If I try and listen and understand first I find I get into a lot fewer instances were I regret what I said or did"
+summary: "A focused and driven UX designer with love for user centered design. I have extensive experience of all parts of the design process and have been in many projects from start to finish. To reach the best result I try to bring all project members into a UX mindset. When everyone understands that UX is everyone’s responsibility great things can be achieved by any team!"
+keySkills:
+  - "Product Design"
+  - "UX Design"
+  - "UI Design"
+  - "Prototyping"
+  - "Information Architecture"
+  - "Sketch"
+projects:
+  - name: "Some other job"
+    date: "2017-2018"
+    role: "UX"
+    about: "This is a job that was cool, yea yea, get it yeaaaaa"
+  - name: "Some Job"
+    date: "2017-2018"
+    role: "UX"
+    about: "This is a job that was cool, yea yea, get it yeaaaaa"
+experience:
+  - name: "Some other job"
+    date: "2017-2018"
+    role: "UX"
+    about: "This is a job that was cool, yea yea, get it yeaaaaa"
+  - name: "Some Job"
+    date: "2017-2018"
+    role: "UX"
+    about: "This is a job that was cool, yea yea, get it yeaaaaa"
+education:
+  - name: "Some other job"
+    date: "2017-2018"
+    role: "UX"
+    about: "This is a job that was cool, yea yea, get it yeaaaaa"
+  - name: "Some Job"
+    date: "2017-2018"
+    role: "UX"
+    about: "This is a job that was cool, yea yea, get it yeaaaaa"
+---
