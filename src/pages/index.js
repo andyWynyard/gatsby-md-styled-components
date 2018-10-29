@@ -7,12 +7,12 @@ import Image from '../components/image'
 import styled from 'styled-components'
 
 const StyledHeading = styled.h1`
-  color: red;
+  color: ${props => props.color};
 `
 
-const IndexPage = () => (
+const IndexPage = props => (
   <Layout>
-    <StyledHeading>Hi people</StyledHeading>
+    <StyledHeading color="green">Hi people</StyledHeading>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
