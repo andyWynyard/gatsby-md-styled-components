@@ -56,8 +56,9 @@ const StyledMissionCard = styled.div`
 
   .mission-card__list {
     margin: 0;
+    padding: 0;
     /* padding-top: 10px; */
-    height: 100%;
+    /* height: 100%; */
   }
 
   .mission-card__list--item {

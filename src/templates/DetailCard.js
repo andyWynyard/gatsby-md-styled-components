@@ -54,12 +54,7 @@ const StyledDetailCard = styled.div`
   .detail-card__quote {
     font-size: 15px;
     font-style: italic;
-    margin-bottom: 30px;
-  }
-  .detail-card__summary {
-    display: grid;
-    /* align-items: center; */
-    height: 100%;
+    margin-bottom: 10px;
   }
 
   .detail-card__summary-keyskills {
@@ -74,18 +69,14 @@ const StyledDetailCard = styled.div`
 
   .detail-card__summary--heading {
     margin-bottom: 10px;
+    height: 2.3rem;
   }
 
   .detail-card__summary--content {
+    margin-top: 0;
     margin-bottom: 7px;
-    overflow: hidden;
-    height: 100%;
-    transition: all 600ms ease-in-out;
   }
 
-  /* .detail-card__summary--content--active {
-  max-height: 1000px;
-} */
   .detail-card__keyskills--content {
     margin-bottom: 7px;
   }
@@ -102,7 +93,10 @@ const StyledDetailCard = styled.div`
   .detail-card__horizontal-line {
     margin-top: 20px;
     margin-bottom: 10px;
-
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #808080;
     height: 1px;
   }
 
@@ -151,7 +145,7 @@ class DetailCard extends Component {
             >
               Get in touch
             </Anchor>
-            <h1 className={`detail-card__heading1`}>{post.frontmatter.name}</h1>
+            <h1>{post.frontmatter.name}</h1>
             <a
               rel="noopener noreferrer"
               target="_blank"
@@ -167,9 +161,7 @@ class DetailCard extends Component {
             >
               Download CV
             </a>{' '}
-            <br />
             <hr className={`detail-card__horizontal-line`} />
-            <br />
             {post.frontmatter.quote.map((item, i) => (
               <p key={i} className={`detail-card__quote`}>
                 "{item}"
@@ -178,26 +170,9 @@ class DetailCard extends Component {
             <div className="detail-card__summary-keyskills">
               <div className="detail-card__summary">
                 <h4 className="detail-card__summary--heading">Summary</h4>
-
                 <p className={`detail-card__summary--content`}>
                   {post.frontmatter.summary}
                 </p>
-
-                {/* <Button
-                  className="detail-card__button"
-                  onClick={() => {
-                    this.setState(state => ({
-                      showMoreSummary: !state.showMoreSummary
-                    }));
-                  }}
-                  padding="3px 15px"
-                  margin="7px auto"
-                  border="1px solid #50a1fd"
-                  borderRadius="500px"
-                  color="#50a1fd"
-                >
-                  {this.state.showMoreSummary ? `Hide` : `Show More`}
-                </Button> */}
               </div>
               <div className="detail-card__keyskills">
                 <h4 className="detail-card__keyskills--heading">Key Skills</h4>
@@ -213,10 +188,6 @@ class DetailCard extends Component {
               {post.frontmatter.projects.map((item, i) => (
                 <MissionCard key={i} data={item} />
               ))}
-              {/* <h4 className={`detail-card__accolades-title`}>Experience</h4>
-              {post.frontmatter.experience.map((item, i) => {
-                return <MissionCard key={i} data={item} />;
-              })} */}
               <h4 className={`detail-card__accolades-title`}>Education</h4>
               {post.frontmatter.education.map((item, i) => {
                 return <MissionCard key={i} education data={item} />

@@ -3,7 +3,6 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import CTA from '../components/cta'
 import AllUX from '../components/allUXers'
-// import "./index.css";
 
 import styled from 'styled-components'
 
