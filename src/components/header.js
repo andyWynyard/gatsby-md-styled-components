@@ -5,6 +5,7 @@ import { Anchor } from './button'
 import logo from '../media/logo.png'
 
 import styled from 'styled-components'
+import GlobalStyle from './GlobalStyle'
 
 const StyledLink = styled(Link)`
   margin: 0 auto;
@@ -17,6 +18,7 @@ const StyledLink = styled(Link)`
 
 const Header = props => (
   <>
+    <GlobalStyle />
     <StyledLink to={`/`}>
       <img className={`layout__link`} src={logo} alt={logo} />
     </StyledLink>
