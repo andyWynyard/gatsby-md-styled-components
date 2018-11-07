@@ -28,22 +28,24 @@ const StyledCard = styled.div`
     margin-top: 16px;
     font-weight: 400;
     margin-left: 3px;
+    line-height: 1.7rem;
   }
 
   .card__content-name {
-    margin-top: 16px;
+    margin-top: 12px;
     margin-bottom: 10px;
-    font-size: ${props => (props.nameFontSize > 210 ? 'inherit' : '16px')};
+    font-size: ${props => (props.nameFontSize > 210 ? null : '16px')};
   }
 
   .card__content-core-strengths--title {
     margin-bottom: 0;
+    margin-top: 0;
     text-transform: uppercase;
   }
 `
 
 export default props => (
-  <StyledCard>
+  <StyledCard nameFontSize={props.nameFontSize}>
     <div className={`card__image-wrapper`}>
       <img src={props.img} alt={props.img} className={`card__img`} />
     </div>

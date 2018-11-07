@@ -17,7 +17,7 @@ export default ({ data }) => {
         Welcome, here you can view all our UX consultants
       </IndexHeading>
       <div>
-        <AllUX width={`300`} data={data.allMarkdownRemark.edges} />
+        <AllUX width={300} data={data.allMarkdownRemark.edges} />
       </div>
       <CTA contact={data.site.siteMetadata.peterContact} />
     </Layout>

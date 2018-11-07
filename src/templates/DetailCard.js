@@ -198,7 +198,7 @@ class DetailCard extends Component {
 
         <CTA contact={metadata.peterContact} />
         <AllUX
-          width="200"
+          width={200}
           bgColor={`#f7f7f7`}
           data={this.props.data.allMarkdownRemark.edges}
         />

@@ -43,6 +43,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.5rem;
     line-height: 2.3rem;
     font-weight: 400;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-bottom: 1.45rem;
     }
 
 

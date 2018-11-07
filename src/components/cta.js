@@ -20,13 +20,17 @@ const StyledCTA = styled.div`
 
   .cta__statement {
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.2rem;
     font-weight: normal;
   }
 
   .cta__question {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    margin-top: 0.5rem;
     font-weight: bold;
+    font-size: 2rem;
   }
 
   .cta__button {
