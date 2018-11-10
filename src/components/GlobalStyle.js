@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 3.3rem;
     line-height: 4.1rem;
     font-weight: 700;
+    padding: 6rem 0 3rem 0;
     }
   h2 {
     font-size: 3.2rem;

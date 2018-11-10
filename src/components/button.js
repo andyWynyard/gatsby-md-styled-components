@@ -3,24 +3,34 @@ import styled from 'styled-components'
 export const Button = styled.button`
   border: none;
   background-color: inherit;
-  margin: ${props => props.margin || 0};
-  padding: ${props => props.padding || 0};
+  margin: ${props => props.margin || '1rem'};
+  padding: ${props => props.padding || '0.5rem 2rem'};
   width: auto;
   overflow: visible;
   font: inherit;
   outline: none;
   cursor: pointer;
   float: ${props => props.float};
-  color: ${props => props.color};
-  background-color: ${props => props.backgroundColor};
+  color: #fff;
+  background-color: ${props =>
+    props.primary
+      ? props.theme.primary
+      : props.secondary
+      ? props.theme.secondary
+      : null};
   border: ${props => props.border};
-  border-radius: ${props => props.borderRadius};
+  border-radius: 200px;
 `
 
 export const Anchor = styled.a`
   float: ${props => props.float};
-  color: ${props => props.color};
-  background-color: ${props => props.backgroundColor};
+  color: #fff;
+  background-color: ${props =>
+    props.primary
+      ? props.theme.primary
+      : props.secondary
+      ? props.theme.secondary
+      : null};
   cursor: pointer;
   /* If there is a diaplay property
         it will take that property, otherwise,
@@ -40,11 +50,3 @@ export const Anchor = styled.a`
     box-shadow: 0 4px 4px -2px #eee;
   }
 `
-
-// export const Button = styled("button")`
-//   ${buttonStyle};
-// `;
-
-// export const Anchor = styled("a")`
-//   ${anchorStyle};
-// `;

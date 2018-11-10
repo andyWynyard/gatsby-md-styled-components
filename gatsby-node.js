@@ -64,7 +64,7 @@ exports.sourceNodes = async ({ actions }) => {
   // fetch raw data from the randomuser api
   const fetchRandomUser = () => get(`https://randomuser.me/api/`)
   // await for results
-  const res = await fetchRandomUser().catch(function(error) {
+  const res = await fetchRandomUser().catch(error => {
     console.log('This is an error bro', error)
   })
 

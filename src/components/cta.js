@@ -32,17 +32,6 @@ const StyledCTA = styled.div`
     font-weight: bold;
     font-size: 2rem;
   }
-
-  .cta__button {
-    margin-top: 20px;
-    text-decoration: none;
-    background-color: #1e66fb;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 4px;
-    font-size: 14px;
-    box-shadow: 0 3px 3px -2px #999;
-  }
 `
 
 export default props => (

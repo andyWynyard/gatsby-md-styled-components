@@ -32,28 +32,26 @@ const StyledLink = styled(Link)`
   color: inherit;
 `
 
-export default props => {
-  return (
-    <Wrapper bgColor={props.bgColor}>
-      <Inner width={props.width}>
-        {props.data.map(item => {
-          return (
-            <div key={item.node.id}>
-              <StyledLink to={item.node.fields.slug}>
-                <Card
-                  strengths={item.node.frontmatter.strengths}
-                  level={item.node.frontmatter.level}
-                  name={item.node.frontmatter.name}
-                  nameFontSize={props.width}
-                  img={
-                    item.node.frontmatter.cover_image.childImageSharp.fluid.src
-                  }
-                />
-              </StyledLink>
-            </div>
-          )
-        })}
-      </Inner>
-    </Wrapper>
-  )
-}
+export default props => (
+  <Wrapper bgColor={props.bgColor}>
+    <Inner width={props.width}>
+      {props.data.map(item => {
+        return (
+          <div key={item.node.id}>
+            <StyledLink to={item.node.fields.slug}>
+              <Card
+                strengths={item.node.frontmatter.strengths}
+                level={item.node.frontmatter.level}
+                name={item.node.frontmatter.name}
+                nameFontSize={props.width}
+                img={
+                  item.node.frontmatter.cover_image.childImageSharp.fluid.src
+                }
+              />
+            </StyledLink>
+          </div>
+        )
+      })}
+    </Inner>
+  </Wrapper>
+)
