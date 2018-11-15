@@ -3,8 +3,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledFooter = styled.div`
+  position: absolute;
+  bottom: 0;
   width: 100vw;
-  position: relative;
+  height: 230px;
   left: 50%;
   right: 50%;
   margin-left: -50vw;

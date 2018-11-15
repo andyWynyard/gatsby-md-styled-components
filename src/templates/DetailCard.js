@@ -137,12 +137,7 @@ class DetailCard extends Component {
           </div>
 
           <div className={`detail-card__content`}>
-            <Anchor
-              href={metadata.malinContact}
-              float="right"
-              color="white"
-              backgroundColor="#00b460"
-            >
+            <Anchor secondary href={metadata.malinContact} float="right">
               Get in touch
             </Anchor>
             <h1>{post.frontmatter.name}</h1>
