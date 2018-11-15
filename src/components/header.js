@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import { Anchor } from './button'
 import logo from '../media/logo.png'
 
-import styled from 'styled-components'
-import GlobalStyle from './GlobalStyle'
+import GlobalStyle from './globalStyle'
 
 const StyledLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
   margin: 0 auto;
   max-width: 900px;
   padding-top: 50px;
@@ -22,13 +24,11 @@ const Header = props => (
     <StyledLink to={`/`}>
       <img className={`layout__link`} src={logo} alt={logo} />
     </StyledLink>
-    <Anchor
-      href={props.contact}
-      float="right"
-      color="white"
-      backgroundColor="#50a1fd"
-    >
+    <Anchor primary href={props.contact} float="right">
       Lets Talk
+    </Anchor>
+    <Anchor primary marginSide={10} float="right">
+      <StyledLink to="/process">The UX Process</StyledLink>
     </Anchor>
   </>
 )

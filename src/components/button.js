@@ -5,7 +5,7 @@ export const Button = styled.button`
   background-color: inherit;
   margin: ${props => props.margin || '1rem'};
   padding: ${props => props.padding || '0.5rem 2rem'};
-  width: auto;
+  /* width: auto; */
   overflow: visible;
   font: inherit;
   outline: none;
@@ -20,6 +20,15 @@ export const Button = styled.button`
       : null};
   border: ${props => props.border};
   border-radius: 200px;
+  text-decoration: none;
+  line-height: 20px;
+  transition: all 0.3s;
+  display: ${props =>
+    props.display ? props.display : props.float ? 'inline-block' : null};
+  :hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 4px -2px #eee;
+  }
 `
 
 export const Anchor = styled.a`

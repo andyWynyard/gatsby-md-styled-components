@@ -9,12 +9,18 @@ import Header from './header'
 const StyledLayout = styled.div`
   margin: 0 auto;
   max-width: 900px;
-  padding: 0 15px;
+  padding: 0;
   padding-top: 50px;
+  min-height: 100vh;
+  position: relative;
+`
+
+const StyledBody = styled.div`
+  padding-bottom: 230px;
 `
 const theme = {
   primary: '#50a1fd',
-  secondary: '#50a1fd',
+  secondary: 'rgb(0, 180, 96)',
 }
 
 const Layout = ({ children }) => (
@@ -47,7 +53,7 @@ const Layout = ({ children }) => (
         <ThemeProvider theme={theme}>
           <StyledLayout className={`layout`}>
             <Header contact={data.site.siteMetadata.peterContact} />
-            {children}
+            <StyledBody>{children}</StyledBody>
             <Footer
               work={data.site.siteMetadata.work}
               homepage={data.site.siteMetadata.homepage}

@@ -47,7 +47,7 @@ export default props => (
         Find a consultant you found interesting?
       </h3>
 
-      <Anchor href={props.contact} color="white" backgroundColor="#50a1fd">
+      <Anchor primary href={props.contact}>
         Lets Talk
       </Anchor>
     </div>

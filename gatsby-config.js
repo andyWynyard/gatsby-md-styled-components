@@ -6,6 +6,11 @@ module.exports = {
     work: 'https://maverickbysigma.se/work/',
     peterContact: `mailto:peter.knapp@sigma.se?Subject=Jag%20vill%20höra%20mer%20om%20UX`,
     malinContact: `mailto:malin.bryntesson@sigma.se?Subject=Jag%20vill%20höra%20mer%20om%20UX`,
+    process: {
+      heading: 'Process',
+      subHeading:
+        'Here we will take you through a little 6 step journey of the UX process. Modern user experiance and design has changed a few short years. ',
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
