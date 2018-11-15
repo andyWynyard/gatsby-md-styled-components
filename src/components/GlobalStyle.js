@@ -16,7 +16,7 @@ html {
     box-sizing: inherit;
   }
   body {
-    height:100vh;
+    height:100vh;  /*  For a fixed at bottom footer */
     font-family: 'Montserrat', sans-serif;
     margin: 0 1rem;
     padding: 0;
